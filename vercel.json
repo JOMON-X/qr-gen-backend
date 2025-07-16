@@ -1,0 +1,9 @@
+{
+    "version":2,
+    "routes":[
+        {
+            "src":"/userApi/(.*)",
+            "dest":"/api/app.js"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+require('dotenv').config()
+const express = require('express')
+const bodyParser = require('body-parser')
+const cors = require('cors')
+const DB = require('../DB')
+const serverLess = require('serverless-http')
+
+
+const userRoute = require('../route/userRoute')
+
+
+const app = express()
+
+//middlewares
+app.use(bodyParser.json())
+app.use(cors({
+    origin:'*'
+}))
+
+//all routes initiate here
+app.use('/userApi',userRoute)
+
+
+module.exports = app
+module.exports.handler = serverLess(app)
