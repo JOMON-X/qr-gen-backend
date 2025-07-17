@@ -17,6 +17,7 @@ app.use(express.json());
 
 //test route
 app.get('/ping', (req, res) => {
+    console.log("Ping endpoint hit!");
   res.send('pong');
 })
 
