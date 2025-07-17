@@ -23,5 +23,6 @@ app.get('/ping', (req, res) => {
 //all routes initiate here
 app.use('/userApi',userRoute)
 
+console.log("APP RUNNING")
 
 module.exports = app
