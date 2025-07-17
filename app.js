@@ -9,10 +9,16 @@ const userRoute = require('./route/userRoute')
 const app = express()
 
 //middlewares
-app.use(bodyParser.json())
 app.use(cors({
     origin:'*'
 }))
+app.use(bodyParser.json())
+app.use(express.json());
+
+//test route
+app.get('/ping', (req, res) => {
+  res.send('pong');
+})
 
 //all routes initiate here
 app.use('/userApi',userRoute)
