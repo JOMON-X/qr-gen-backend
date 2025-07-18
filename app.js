@@ -14,10 +14,13 @@ app.use(bodyParser.json())
 app.use(express.json());
 app.use(cors({origin:'*'}))
 
+app.get('/',(req,res)=>{
+    req.send("hello from vercel")
+}) 
 
 
 //all routes initiate here
-app.use('/userApi',userRoute)
+// app.use('/userApi',userRoute)
 
 
 
