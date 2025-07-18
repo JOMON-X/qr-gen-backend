@@ -18,6 +18,11 @@ app.get('/',(req,res)=>{
     res.send("hello from vercel")
 }) 
 
+app.get('/ping', (req, res) => {
+  res.send('pong');
+});
+
+
 
 //all routes initiate here
 // app.use('/userApi',userRoute)
