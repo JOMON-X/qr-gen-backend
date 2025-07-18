@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cors({origin:'*'}))
 
 app.get('/',(req,res)=>{
-    req.send("hello from vercel")
+    res.send("hello from vercel")
 }) 
 
 
