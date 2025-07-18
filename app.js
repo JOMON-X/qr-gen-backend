@@ -16,6 +16,10 @@ app.use(cors({origin:'*'}))
 //all routes initiate here
 app.use('/userApi',userRoute)
 
+app.get('/',(req,res)=>{
+    res.send("welcome on render")
+})
+
 
 
 module.exports = app
