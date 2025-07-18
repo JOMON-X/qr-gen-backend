@@ -6,10 +6,10 @@ mongoose.connect(process.env.DB_URL, {
   useUnifiedTopology: true,
 })
   .then(() => {
-    console.log('\x1b[32m%s\x1b[0m', '✅ DB connected');
+    console.log('\x1b[32m%s\x1b[0m', ' DB connected');
   })
   .catch((error) => {
-    console.error('❌ DB connection error:', error);
+    console.error(' DB connection error:', error);
     process.exit(1); // Stops the function to prevent timeout
   });
 
