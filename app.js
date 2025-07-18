@@ -1,6 +1,5 @@
 console.log("APP STARTING");
 
-
 require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser')
@@ -24,7 +23,7 @@ app.get('/',(req,res)=>{
     res.send("hello from vercel")
 }) 
 
-app.get('/ping', (req, res) => {
+app.get('/api/ping', (req, res) => {
     console.log("HIT");
   res.send('pong');
 });
