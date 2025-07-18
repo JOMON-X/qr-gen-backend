@@ -8,7 +8,7 @@ const cors = require('cors')
 
 console.log("CONNECTING TO DB");
 
-const DB = require('./DB')
+// const DB = require('./DB')
 // const userRoute = require('./route/userRoute')
 
 
