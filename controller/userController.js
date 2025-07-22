@@ -36,7 +36,7 @@ exports.regUser = async(req,res)=>{
     })
 
     const saveUser = await newUser.save()
-    res.json({saveUser})
+    res.json({"regsts":"0","msg":"User registered succesfully"},{saveUser})
     } catch (error) {
         res.json({"error":error})
     }
