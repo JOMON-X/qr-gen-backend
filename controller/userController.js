@@ -85,7 +85,7 @@ exports.addLinkQr = async(req,res)=>{
             user,
         })
         const saveQr = await newLinkQr.save()
-        res.json({"addsts":"O","msg":"QR Saved succesfully",saveQr})
+        res.json({"addsts":"0","msg":"QR Saved succesfully",saveQr})
     } catch (error) {
         res.json({"error":error,"addsts":"1","msg":"Unable to save QR"})
     }
@@ -206,9 +206,9 @@ exports.editQR = async(req,res)=>{
             {qrLink,qrColor},
             {new:true}
         )
-        res.json(updateQR)
+        res.json({"addsts":"0","msg":"QR Saved succesfully",updateQR})
     } catch (error) {
-        res.json(error)
+        res.json({"addsts":"1","msg":"Unable to save QR",error})
     }
 
 }
