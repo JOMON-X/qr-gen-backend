@@ -10,7 +10,7 @@ const app = express()
 //middlewares
 app.use(bodyParser.json())
 app.use(express.json());
-app.use(cors({origin:'*'}))
+app.use(cors({origin:'https://ultimateqr.onrender.com'}))
 
 
 //all routes initiate here
